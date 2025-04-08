@@ -1,0 +1,62 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+log/
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Misc
+coverage/
+.next/
+out/
+.eslintcache
+.cache/
+.parcel-cache/
+
+# React Native
+.expo/
+*.expo/
+
+# Optional: ignore MongoDB data files (if stored locally in project)
+data/
+*.mongodb
+
+# Optional: Ignore frontend dependencies if using separate React folder
+frontend/node_modules/
+frontend/build/
+
+# Optional: Ignore backend dependencies if using separate server folder
+server/node_modules/
+server/dist/
+
+# Optional: Ignore uploads or user-generated content
+uploads/
