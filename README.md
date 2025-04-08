@@ -30,6 +30,3 @@ This is a simple yet fully functional full-stack application built using **React
 - Body-Parser
 
 ---
-
-## 📁 Folder Structure
-
