@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./App.css"; // Import the CSS file
 
 function App() {
   const [email, setEmail] = useState("");
@@ -7,7 +8,7 @@ function App() {
 
   const sendEmail = async () => {
     if (!email) {
-      setMessage("Please enter an email address.");
+      setMessage("❗ Please enter an email address.");
       return;
     }
 
@@ -18,25 +19,23 @@ function App() {
       setMessage(response.data.message);
     } catch (error) {
       console.error("Error:", error);
-      setMessage("Failed to send email.");
+      setMessage("❌ Failed to send email.");
     }
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h2>Email Sender</h2>
-      <input
-        type="email"
-        placeholder="Enter email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        style={{ padding: "10px", width: "250px" }}
-      />
-      <br />
-      <button onClick={sendEmail} style={{ marginTop: "10px", padding: "10px 20px" }}>
-        Send
-      </button>
-      <p>{message}</p>
+    <div className="container">
+      <div className="card">
+        <h1>Email Sender 💌</h1>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button onClick={sendEmail}>Send Email</button>
+        {message && <p className="message">{message}</p>}
+      </div>
     </div>
   );
 }
